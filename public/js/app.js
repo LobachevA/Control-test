@@ -9,13 +9,11 @@ $(function(){
                 title: $('#title').val(),
                 detail_text: $('#detail_text').val()},
             success: function(answer)
-            { $('#answer').html(answer);
-              $("div").removeAttr("id");
-              $(".podstava").before("<div class='podstava' id='answer'></div>");
+            { $('#reviews').html('');
+              $('#reviews').html(answer);
               $('#myform').trigger( 'reset' );
             }
         });
-
 
     });
 });

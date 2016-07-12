@@ -34,8 +34,7 @@
         <input type="hidden" id="_token"  name="_token" value="{{ csrf_token() }}">
         <button type="submit" class="btn btn-primary btn-block" name="submit" id="submit">Отправить</button>
     </form>
-
-    <div class="reviews">
+    <div class="reviews" id="reviews">
         @yield('posts')
     </div>
 </div>

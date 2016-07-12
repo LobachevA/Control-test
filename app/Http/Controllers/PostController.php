@@ -22,7 +22,7 @@ class PostController extends Controller
 
     public function ajax(Post $post, Request $request) {
         $post->create($request->all());
-        $number = $post->maxId();
-        return view('posts.ajax',['request' => $request,'number' => $number]);
+        $res=$post->getPublished();
+        return view('posts.ajax',['posts'=> $res, 'request' => $request]);
     }
 }

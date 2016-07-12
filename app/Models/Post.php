@@ -14,7 +14,4 @@ class Post extends Model
     public function getPublished(){
         return $this->orderBy('id','desc')->paginate(5);
     }
-    public function maxId(){
-        return $this->max('id');
-    }
 }
