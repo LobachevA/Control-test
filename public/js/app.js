@@ -12,6 +12,12 @@ $(function(){
             { $('#reviews').html('');
               $('#reviews').html(answer);
               $('#myform').trigger( 'reset' );
+              $("a[href*='ajax']").each(
+                function()
+                {
+                    this.href = this.href.replace(/(ajax)/g,"");
+                }
+            );
             }
         });
 
